@@ -16,7 +16,9 @@ if (isset($_POST['reg_user'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
-
+	// ????????????
+  $permission = mysqli_real_escape_string($db, $_POST['permission']);
+  $code = mysqli_real_escape_string($db, $_POST['code']);
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
@@ -25,10 +27,11 @@ if (isset($_POST['reg_user'])) {
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
   }
-
+  // ????????????
+  if (empty($permission)) { array_push($errors, "Permission is required"); }
   // first check the database to make sure 
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email' LIMIT 1";
+  $user_check_query = "SELECT * FROM user WHERE username='$username' OR email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
   
@@ -41,13 +44,34 @@ if (isset($_POST['reg_user'])) {
       array_push($errors, "email already exists");
     }
   }
+  // ?????????
+    if( $permission === "1"){
+		if($code != "True_Cook"){
+			array_push($errors, "Something went wrong");
+		}
+	}
+	if( $permission === "2"){
+		if($code != "True_IT"){
+			array_push($errors, "Something went wrong");
+		}
+	}
+	if( $permission === "3"){
+		if($code != "True_Vendor"){
+			array_push($errors, "Something went wrong");
+		}
+	}
+	if( $permission === "4"){
+		if($code != "True_Manager"){
+			array_push($errors, "Something went wrong");
+		}
+	}
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO customer (username, email, password) 
-  			  VALUES('$username', '$email', '$password')";
+  	$query = "INSERT INTO user (username, email, password,permission) 
+  			  VALUES('$username', '$email', '$password','$permission')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
