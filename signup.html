@@ -8,9 +8,9 @@
 	<body>
 		<div class="sign-up-form">
 			<h1> Sign Up Form </h1>
-			<form>
-				<input type="email" name="input-box" placeholder="Your Email">
-				<input type="password" name="input-box" placeholder="Your password">
+			<form action="signup.php" method="post">
+				<input type="email" name="cus_email" placeholder="Your Email">
+				<input type="password" name="cus_password" placeholder="Your password">
 				<p>Who are you? <br> (Please select only one answer below) </p>
 				<p> <input type="checkbox"> a customer
 					<input type="checkbox"> a cook
@@ -21,7 +21,7 @@
 				</p>
 				<p> <input type="checkbox"> I agree to the <a href="termofservices.html">terms of services</a>
 					<br> <span style="color:red">This should be selected </span> </p>
-				<button type="button" class="signup-btn">Sign up</button>
+				<button type="submit">Sign up</button>
 				<hr>
 				<p class="or">OR</p>
 				<button type="button" class="signup-btn">Sign up with Facebook</button>
