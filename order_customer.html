@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ORDER - ĐẦU BẾP</title>
+    <meta charset="utf-8">
+    <script src="foods.js"> async</script>
+    <link rel="stylesheet" href="style.css">
+	<style type="text/css">
+        nav{
+            background-color:#333;
+        }
+        nav a{
+            display:inline-block;
+            padding:0.5%;
+            font-size:130%;
+            color:white;
+            text-decoration:none;
+            text-align: center;
+            margin:0 auto;
+            }
+        nav a:hover
+        {
+            transition: all 0.3s ease 0s;
+        	background-color:teal;
+        }
+        body {
+        	background-image: url(back3.jpg);
+        	background-size:cover;
+        }
+       </style>
+</head>
+<body>
+	<nav style="text-align: right; ">
+    	<span style="color: white;font-size: 120%">Xin chào, Customer!&emsp;|</span>&emsp;
+        <a href="index.html">Sign Out</a>
+    </nav>
+	<p style="font-size:400%;color:white;background-color: #333;text-align: center;font-family:fantasy;margin: -0.5%;padding:0%">SMART FOOD COURT SYSTEM</p>
+	<nav style="text-align: center; margin: 0px">
+        <a href="home_customer.html">TRANG CHỦ </a> &emsp;&emsp;&emsp;
+        <a href="order_customer.html">ĐẶT HÀNG</a>&emsp;&emsp;&emsp;
+        <a href="order_customer.html">MENU</a>&emsp;&emsp;&emsp;
+    </nav>
+        
+    <div class="order-container">
+        
+        <div class="category-container">
+            <div class="section-header">Gian hàng "Ẩm thực độc đáo"</div>
+            <div class="section-header">Gian hàng "Trà sưa"</div>
+        </div>
+
+        <div class="food-container">
+            <div class="section-header" >Gian hàng "Ẩm thực độc đáo"</div>
+            <div class="food-items">
+                <div class="food-item">
+                    <img class="food-item-image" src="Images/Menu/Court1/Food01.png">
+                    <div class="food-item-details">
+                        <div class="food-item-title">Mì tôm cay hải sản</div>
+                        <div class="food-item-descriptions">Mì cay hải sản với cùng tôm mực khổng lồ ăn mê mệt!
+
+                        </div>
+                        <div class="food-item-order">
+                            <span class="food-item-price">29.000 đ</span>
+                            <button class="btn1 food-item-button" type="button">THÊM</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img class="food-item-image" src="Images/Menu/Court1/Food02.png">
+                    <div class="food-item-details">
+                        <div class="food-item-title">Gà rán bóng đêm</div>
+                        <div class="food-item-descriptions">Thưởng thức một món gà bóng đêm ngon mê li như ở nhà hàng!!<br></div>
+                        <div class="food-item-order">
+                            <span class="food-item-price">34.000 đ</span>
+                            <button class="btn1 food-item-button" type="button">THÊM</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img class="food-item-image" src="Images/Menu/Court1/Food03.png">
+                    <div class="food-item-details">
+                        <div class="food-item-title">Cơm xào bò dưa muối</div>
+                        <div class="food-item-descriptions">Bò cùng dưa chua chua ngọt ngọt!</div>
+                        <div class="food-item-order">
+                            <span class="food-item-price">24.000 đ</span>
+                            <button class="btn1 food-item-button" type="button">THÊM</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img class="food-item-image" src="Images/Menu/Court1/Food04.png">
+                    <div class="food-item-details">
+                        <div class="food-item-title">Canh khổ qua nhồi thịt</div>
+                        <div class="food-item-descriptions">Món ăn quen thuộc với mọi nhà, nhưng lại rất là ngon nha :))))<br></div>
+                        <div class="food-item-order">
+                            <span class="food-item-price">24.000 đ</span>
+                            <button class="btn1 food-item-button" type="button">THÊM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-header">Gian hàng "Trà sưa"</div>
+            <div class="food-items">
+                <div class="food-item">
+                    <img class="food-item-image" src="Images/Menu/Court2/Food01.png">
+                    <div class="food-item-details">
+                        <div class="food-item-title">Trà sữa truyền thống</div>
+                        <div class="food-item-descriptions">Trà sữa truyền thống ngon mê li !!<br></div>
+                        <div class="food-item-order">
+                            <span class="food-item-price">19.000 đ</span>
+                            <button class="btn1 food-item-button" type="button">THÊM</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="food-item">
+                    <img class="food-item-image" src="Images/Menu/Court2/Food02.png">
+                    <div class="food-item-details">
+                        <div class="food-item-title">Cà phê đen đá</div>
+                        <div class="food-item-descriptions">Người ta nói bạc xỉu cho kẻ nặng tình. Vậy còn đen đá?<br></div>
+                        <div class="food-item-order">
+                            <span class="food-item-price">14.000 đ</span>
+                            <button class="btn1 food-item-button" type="button">THÊM</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-cart-container">
+            <div class="cart-row">
+            </div>
+            <div class="cart-items">
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Tổng cộng</strong>
+                <span class="cart-total-price">0 đ</span>
+            </div>
+            <button class="btn-purchase" type="button">THANH TOÁN</button>
+        </div>
+    </div>
+</body>
+</html>
