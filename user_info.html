@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Trang chủ</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="bg.css" />
+    <style type="text/css">
+      nav {
+        background-color: #333;
+      }
+      nav a {
+        display: inline-block;
+        padding: 10px;
+        font-size: 20px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+      }
+      nav a:hover {
+        background-color: teal;
+      }
+      body {
+        background-image: url(back3.jpg);
+        background-size: cover;
+      }
+      #test {
+        top: -10px;
+      }
+      main {
+        padding: 10px;
+      }
+      .section-info {
+        float: left;
+        padding: 15px;
+        text-align: left;
+        height: 100%;
+      }
+      .section-recharge {
+        float: right;
+        padding: 15px;
+        height: 100%;
+      }
+      input[type="number"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        width: 100%;
+        background-color: #333333;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 700;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <nav style="text-align: right; margin: -10px;">
+      <a href="index.html">Đăng xuất</a>
+    </nav>
+    <p
+      style="
+        font-size: 70px;
+        color: white;
+        background-color: #333;
+        text-align: center;
+        font-family: fantasy;
+        margin: -10px;
+        padding: 0px;
+      "
+    >
+      SMART FOOD COURT SYSTEM
+    </p>
+    <nav style="text-align: center; margin: -10px;">
+      <a href="index.html">TRANG CHỦ </a> &emsp;&emsp;&emsp;
+    </nav>
+    <main>
+      <div class="section-info">
+        <h2>Thông tin tài khoản</h2>
+        <div class="section-details">
+          <p>Tên tài khoản: Đoàn Ngọc Thịnh</p>
+          <p>Email: abc@gmail.com</p>
+          <p>Số dư: 0 đồng</p>
+        </div>
+      </div>
+      <div class="section-recharge">
+        <h2>Nạp tiền:</h2>
+        <div class="section-details">
+          <form action="/action_page.php">
+            <!-- Hereeeeeeeeeeeeeeee-->
+            <label for="amount">Số tiền cần nạp</label>
+            <input
+              type="number"
+              id="amount"
+              name="amount"
+              placeholder="Nhập số tiền..."
+            />
+            <label for="bank">Ngân hàng</label>
+            <select id="bank" name="bank">
+              <option disabled selected value> -- select an option -- </option>
+              <option value="OCB">OCB</option>
+              <option value="BIDV">BIDV</option>
+              <option value="VietinBank">VietinBank</option>
+              <option value="Agribank">Agribank</option>
+              <option value="VietcomBank">VietcomBank</option>
+            </select>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <div style="clear: both;"></div>
+    </main>
+  </body>
+</html>
