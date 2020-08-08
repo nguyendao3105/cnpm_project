@@ -1,0 +1,1305 @@
+/* A. All common elements
+ * 1. Font
+ * 2. Body
+ * 3. Common elements
+ * 4. - Header (or navigation bar)
+ * 5. - Main 
+ * 6. - Footer 
+ * 7. Animation
+ * 8. Form (input + seclect)
+ * 9. Pages' background
+ * 10. Color
+ * 11. Modal
+*/
+/* ---------------------- */
+/* 1. Font */
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/fonts/Roboto-Light.ttf);
+  font-weight: lighter;
+}
+
+/* 2. Body*/
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* 3. Common elements */
+/* 3.1. Container + row */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.clearfix {
+  content: "";
+  visibility: hidden;
+  clear: both;
+}
+
+.container::before,
+.container::after,
+.row::before,
+.row::after {
+  display: table;
+  content: "";
+}
+
+/* All common breakpoint today (from viblo.asia) */
+/* Extra small devices (phones, 600px and down) */
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 740px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1116px;
+  }
+}
+
+/* 3.2 Button */
+.btn {
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0px 10px;
+  text-transform: none;
+  cursor: pointer;
+  min-width: 0;
+  outline: none;
+}
+
+.btn-blue {
+  color: #ffffff;
+  background-color: #00ccff;
+  transition: all 0.2s ease 0s;
+}
+
+.btn-blue:hover {
+  transition: all 0s;
+  color: #00ccff;
+  background-color: #ffffff;
+}
+
+.btn-red {
+  color: #333333;
+  background-color: #ffffff;
+  transition: all 0.2s ease 0s;
+}
+
+.btn-red:hover {
+  transition: all 0s;
+  color: #ffffff;
+  background-color: #f54336;
+}
+/* 3.3 Arrow*/
+.arrows {
+  width: 20px;
+  height: 20px;
+  border-color: #333333;
+  position: absolute;
+  top: 50%;
+}
+
+.prev {
+  border-bottom: 6px solid;
+  border-left: 6px solid;
+  transform: rotate(45deg);
+  left: 10px;
+}
+
+.next {
+  border-bottom: 6px solid;
+  border-left: 6px solid;
+  transform: rotate(-135deg);
+  right: 10px;
+}
+
+/* 3.4. Logo*/
+.logo {
+  cursor: pointer;
+}
+
+/* 3.5. Menu divider*/
+.solid_top {
+  border-top: 1px solid #ffffff;
+}
+
+.solid_left {
+  border-left: 1px solid #ffffff;
+}
+
+/* 3.6. Text*/
+a {
+  text-decoration: none;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.section-header-small {
+  margin-bottom: 25px;
+}
+
+.h2-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px !important;
+  color: #333;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.h2-heading::after {
+  position: absolute;
+  content: "";
+  background: #d43031;
+  height: 4px;
+  width: 70px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -35px;
+}
+
+.h3-heading {
+  font-weight: bold;
+  font-size: 25px !important;
+  color: #333;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+}
+
+.h3-heading::after {
+  position: absolute;
+  content: "";
+  background: #d43031;
+  height: 2px;
+  width: 50px;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+}
+
+/* 3.7. Table */
+
+.table-section {
+  font-weight: normal;
+}
+
+.table-section img {
+  max-width: 50px;
+}
+
+.table td {
+  vertical-align: middle;
+}
+
+.table-hover tbody tr td,
+.table-hover tbody tr th {
+  transition: all 0.2s ease 0s;
+}
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  transition: all 0s;
+  color: #ffffff;
+  background-color: #00ccff;
+}
+
+/* 4. Header (or navigation bar) */
+header {
+  top: 0px;
+  left: 0px;
+  height: 60px;
+  width: 100%;
+  background-color: #333333;
+  height: 140px;
+}
+
+header button.btn {
+  margin-left: 15px;
+  margin-right: 0px;
+}
+
+/* 4.1. logo*/
+header .logo {
+  display: none;
+}
+
+/* 4.2. background_hider*/
+.background_hider {
+  display: none;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #000000;
+}
+
+/* 4.3. nav_bar */
+.nav_bar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+/* 4.4. nav_links */
+/* a. Top container + Bottom container + Burger */
+.nav_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.nav_links a {
+  padding: 0px 15px;
+  margin: 0px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  /*text-transform: uppercase;*/
+  transition: all 0.2s ease 0s;
+}
+
+.nav_links a:hover {
+  transition: all 0s;
+  color: #ffffff;
+  background-color: teal;
+}
+
+.top_nav_con {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.logo_nav_con {
+  color: #ffffff;
+  font-size: 49px;
+  font-family: fantasy;
+  font-weight: lighter;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.bottom_nav_con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-transform: uppercase;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger_line {
+  width: 24px;
+  height: 3px;
+  max-height: 3px;
+  background-color: #ffffff;
+}
+
+.burger_line::before,
+.burger_line::after {
+  position: absolute;
+  content: "";
+  width: 24px;
+  height: 3px;
+  max-height: 3px;
+  background-color: #ffffff;
+}
+
+.burger_line::before {
+  transform: translateY(-8px);
+}
+.burger_line::after {
+  transform: translateY(8px);
+}
+
+/* b. Responsive for navbar */
+@media screen and (max-width: 768px) {
+  .nav_bar .logo {
+    display: block;
+    font-size: 28px;
+  }
+
+  .nav_links {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 300px;
+    padding: 30px 15px;
+    background-color: #333333;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
+    z-index: 9999;
+  }
+  header {
+    height: 60px;
+  }
+
+  .nav_links a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0px;
+  }
+
+  #logout {
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0px;
+  }
+
+  #logout a {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  header .logo_nav_con {
+    display: none;
+  }
+
+  header .top_nav_con,
+  header .bottom_nav_con {
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  header button.btn {
+    margin-left: 0;
+    margin-bottom: 15px;
+    border-radius: #ffffff;
+    width: 100%;
+  }
+
+  .burger {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+  }
+
+  /* !!! Nav entries' effect*/
+  /* Set opacity to 1 if it's in a childnode*/
+  .nav_links a,
+  .nav_links .btn {
+    opacity: 0;
+  }
+}
+
+/* c. Buger's toggle */
+.bactive_burger {
+  opacity: 0;
+}
+
+.bactive_nav {
+  transform: translateX(0%);
+}
+
+.bactive_background_hider {
+  display: block;
+  opacity: 0.5;
+  z-index: 9998;
+}
+
+.bactive_body {
+  overflow: hidden;
+}
+
+/* 6. footer*/
+footer {
+  color: #ffffff;
+  font-size: 14px;
+  background-color: #333333;
+  padding: 40px 0px 20px;
+}
+
+footer .logo {
+  margin-bottom: 15px;
+  height: 20px;
+}
+
+footer .row {
+  display: flex;
+  justify-content: center;
+}
+
+footer .info {
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+  padding: 15px;
+}
+
+footer .social i.fa {
+  font-size: 24px;
+  padding: 4px;
+  color: #ffffff;
+}
+
+footer .social i.fa:hover {
+  transition: all 0.2s;
+  color: #00ccff;
+}
+
+footer .social {
+  margin-top: -8px;
+  text-align: right;
+}
+
+footer .social ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+/* 7. Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* 8. Form (input + select) */
+input,
+select {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  max-height: 50px;
+}
+
+input:focus,
+select:focus {
+  background-color: #00ccff07;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #333333;
+  color: white;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border: none;
+  -webkit-border-radius: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+}
+
+input[type="submit"]:hover {
+  transition: all 0s;
+  background-color: #00ccff;
+}
+
+label {
+  font-weight: 400;
+}
+
+/* 9. Pages' background */
+
+.overlay-white {
+  border-radius: 25px;
+  padding: 15px;
+  background: #ffffffcc;
+}
+
+.overlay-solid-white {
+  border-radius: 25px;
+  padding: 15px;
+  background: #ffffff;
+}
+
+.home-slide-bg {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  animation: slideBG 10s linear infinite 0s;
+  animation-timing-function: ease-in-out;
+  background-image: url("../images/backgrounds/sliders/foodcourt01.jpg");
+}
+
+@keyframes slideBG {
+  0%,
+  5% {
+    background-image: url("../images/backgrounds/sliders/foodcourt01.jpg");
+  }
+  25%,
+  30% {
+    background-image: url("../images/backgrounds/sliders/foodcourt02.jpg");
+  }
+  50%,
+  55% {
+    background-image: url("../images/backgrounds/sliders/foodcourt03.jpg");
+  }
+  75%,
+  80% {
+    background-image: url("../images/backgrounds/sliders/foodcourt04.jpg");
+  }
+  100% {
+    background-image: url("../images/backgrounds/sliders/foodcourt01.jpg");
+  }
+}
+
+.food-bg {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  background-image: url("../images/backgrounds/back3.jpg");
+}
+
+.maintain-bg {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  background-image: url("../images/backgrounds/maintain3.jpg");
+}
+
+.it-bg {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  background-image: url("../images/backgrounds/it.jpg");
+}
+
+.ui-bg {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+  background-image: url("../images/backgrounds/foodcourt_white.png");
+}
+
+/* 10. Color */
+.color-red {
+  color: #ff1f1f;
+}
+
+.color-green {
+  color: #50eb50;
+}
+
+.color-yellow {
+  color: #eeb44a;
+}
+
+/* 11. Modal */
+
+#modal {
+  font-size: 16px;
+}
+
+#modal-background-hider {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #000000;
+  opacity: 0.5;
+  z-index: 98;
+}
+
+#modal-box {
+  position: fixed;
+  width: 680px;
+  left: calc(50vw - 300px);
+  bottom: calc(50vh - 265px);
+  z-index: 99;
+  /*background-color: #eeb44a;*/
+  animation-name: fadeUp;
+  animation-duration: 0.4s;
+}
+
+#modal-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 40px;
+  background-color: #ffffff;
+  font-weight: bold;
+  color: #333333;
+  border-radius: 25px 25px 0px 0px;
+  cursor: ;
+}
+
+#modal-body {
+  background-color: #ffffffee;
+  height: 450px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+#modal-footer {
+  height: 40px;
+}
+
+#modal-body::after,
+#modal-footer:after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+#modal a {
+  text-decoration: none;
+}
+
+#modal .btn-modal {
+  float: left;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 0px 25px 25px;
+}
+
+#modal .btn-modal-left {
+  float: left;
+  height: 100%;
+  width: 50%;
+  border-radius: 0px 0px 0px 25px;
+}
+
+#modal .btn-modal-right {
+  float: left;
+  height: 100%;
+  width: 50%;
+  border-radius: 0px 0px 25px 0px;
+}
+
+@media screen and (max-width: 768px) {
+  #modal-box {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  #modal-body {
+    height: 70vh;
+  }
+
+  #modal-footer {
+    border-radius: 0px;
+  }
+
+  #modal .btn-modal,
+  #modal .btn-modal-left,
+  #modal .btn-modal-right {
+    border-radius: 0px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #modal-box {
+    left: calc(50vw - 355px);
+    width: 710px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #modal-box {
+    left: calc(50vw - 465px);
+    width: 930px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #modal-box {
+    left: calc(50vw - 543px);
+    width: 1086px;
+  }
+}
+
+/* B. Each page
+ * Page 1: Sign in
+ * Page 2: Sign up
+ * Page 3 - 7: Home (guest, customer, manager, owner, IT Staff)
+ * Page 8: Menu (customer)
+ * Page 9: Menu (cook)
+ * Page 10: Menu (owner)
+ * Page 11: Order (customer)
+ * Page 12: Order (cook)
+ * Page 13 - 14: Report (manager, owner)
+ * Page 15: Maintain (IT Staff)
+ * Page 16: Maintain history (IT Staff)
+ * Page 17 - 21: User info (customer, cook, manager, owner, IT Staff)
+ * Page 22: Maintaining
+*/
+/* ---------------------- */
+/* Page 1: Sign in */
+.sign-in-form {
+  width: 300px;
+  box-shadow: 0 0 3px 0 rbga(0, 0, 0, 0.3);
+  background: white;
+  padding: 20px;
+  margin: 8% auto 0;
+  text-align: center;
+}
+
+/* Page 3 - 7: Home */
+#welcome {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+#welcome p {
+  line-height: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0px 0px 15px;
+}
+
+/* Page 8: Menu (Customer) */
+#menu-customer {
+  padding: 30px 0px;
+  min-height: 500px;
+}
+
+/* Button */
+.btn1 {
+  text-decoration: none;
+  text-align: center;
+  padding: 8px 16px;
+  color: #ffffff;
+  background-color: #049dc4;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+}
+.btn1:hover {
+  transition: all 0s;
+  background-color: #00ccff;
+}
+
+.btn1:disabled,
+.btn1[disabled] {
+  background-color: #007a99;
+}
+
+/* Button in the cart */
+.btn-remove {
+  padding: 8px 16px;
+  background-color: #d43031;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+}
+.btn-remove:hover {
+  transition: all 0s;
+  background-color: rgb(255, 31, 31);
+}
+
+/* Order section */
+#order-section {
+  padding: 30px 0px;
+  min-height: 500px;
+}
+
+#order-section [class*="col-"] {
+  padding: 7.5px !important;
+}
+
+#order-section .category-container {
+  padding: 15px;
+  background-color: #ffffffcc;
+  border-radius: 25px;
+}
+
+#order-section .food-container {
+  padding: 15px;
+  background-color: #ffffffcc;
+  border-radius: 25px;
+}
+
+#order-section .order-cart-container {
+  padding: 15px;
+  background-color: #ffffffcc;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 25px;
+}
+
+@media only screen and (max-width: 992px) {
+  #order-section [class*="col-"] {
+    padding: 15px 0px !important;
+  }
+}
+
+.vender-container {
+  padding: 0px 0px 20px;
+}
+
+.vender-header {
+  color: #333;
+  font-weight: normal;
+  padding: 15px 0px;
+  text-align: left;
+  font-size: 1.25em;
+}
+
+#order-section a {
+  color: #333333;
+  text-decoration: none;
+  width: 100%;
+  transition: all 0.2s ease 0s;
+}
+
+#order-section a:hover {
+  transition: all 0s;
+  color: #ffffff;
+  background-color: teal;
+}
+
+/* Button in the cart */
+.btn-remove {
+  font-size: inherit;
+  padding: 8px 16px;
+  background-color: #d43031;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+}
+.btn-remove:hover {
+  transition: all 0s;
+  background-color: #ff1f1f;
+}
+
+.btn-purchase {
+  font-size: inherit;
+  padding: 8px 16px;
+  background-color: #049dc4;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease 0s;
+}
+.btn-purchase:hover {
+  transition: all 0s;
+  background-color: #00ccff;
+}
+
+.btn-purchase:disabled,
+.btn-purchase[disabled] {
+  font-size: inherit;
+  padding: 8px 16px;
+  background-color: #007a99;
+  border: none;
+  border-radius: 100px;
+  cursor: default;
+}
+
+/* Food */
+
+.food-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.food-item {
+  display: flex;
+  margin-top: 20px;
+  align-content: flex-start;
+  align-items: flex-start;
+}
+
+.food-item:disabled,
+.food-item[disabled] {
+  opacity: 0.6;
+}
+
+.food-item-image {
+  height: 150px;
+  border-radius: 10px;
+}
+
+.food-item-title {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.25em;
+
+  margin-bottom: 15px;
+}
+
+.food-item-descriptions {
+  font-weight: normal;
+  flex-grow: 1;
+}
+
+.food-item-details {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.food-item-order {
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.food-item-price {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.food-items {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.cart-vender-name {
+  margin: 10px 0px;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  margin-top: 15px;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cart-item {
+  width: 50%;
+}
+
+.cart-price {
+  width: 20%;
+  color: #333;
+}
+
+.cart-quantity {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cart-item-title {
+  color: #333;
+  margin: 0px 10px;
+  font-size: 1em;
+}
+
+.cart-item-image {
+  width: 40px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.btn-danger {
+  color: white;
+  background-color: #d43031;
+  border: none;
+  border-radius: 0.3em;
+  font-weight: bold;
+}
+
+.btn-danger:hover {
+  background-color: #d43031;
+}
+
+.cart-quantity-input {
+  height: 25px;
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  color: #333;
+  padding: 0;
+  text-align: center;
+}
+
+.cart-row:last-child {
+  border-bottom: 1px solid black;
+}
+
+.cart-row:last-child .cart-column {
+  border: none;
+}
+
+.cart-total {
+  margin: 15px 0px;
+  display: flex;
+  justify-content: space-between;
+  text-align: end;
+}
+
+.cart-total-title {
+  font-weight: normal;
+  font-size: 1.25em;
+  color: black;
+}
+
+.cart-total-price {
+  font-weight: bold;
+  color: #333;
+  font-size: 1.6em;
+}
+
+/* Page 9: Menu (cook) */
+#menu-cook {
+  padding: 30px 0px;
+  min-height: 500px;
+  font-size: 18px;
+}
+
+#menu-cook .menu-result {
+  padding-top: 15px;
+}
+
+/* Page 10: Menu (owner) */
+#menu-owner {
+  padding: 30px 0px;
+  min-height: 500px;
+  font-size: 18px;
+}
+
+#menu-owner .add-food,
+#menu-owner .menu-result {
+  padding-top: 15px;
+}
+
+#menu-owner form::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#menu-owner label {
+  padding: 17px 0px;
+  margin: 0px;
+  display: inline-block;
+}
+
+/* Page 11 - 12: Order (Customer, cook) */
+#order-customer {
+  min-height: 500px;
+  padding: 30px 0px;
+  font-size: 18px;
+}
+
+#order-cook {
+  min-height: 500px;
+  padding: 30px 0px;
+  font-size: 18px;
+}
+
+#order-customer .order-result,
+#order-cook .order-result {
+  padding-top: 15px;
+}
+#order-customer .table-hover tbody tr:hover td,
+#order-customer .table-hover tbody tr:hover th,
+#order-cook .table-hover tbody tr:hover td,
+#order-cook .table-hover tbody tr:hover th {
+  cursor: pointer;
+}
+
+/* Page 13 - 14: Report */
+
+#report-manager,
+#report-owner {
+  padding: 30px 0px;
+  min-height: 500px;
+  font-size: 18px;
+}
+
+#report-manager .report-filter,
+#report-manager .report-result,
+#report-owner .report-filter,
+#report-owner .report-result {
+  padding-top: 15px;
+}
+
+#report-manager .report-filter::after,
+#report-manager .report-result::after,
+#report-owner .report-filter::after,
+#report-owner .report-result::after,
+#report-owner form::after,
+#report-owner form::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+#report-manager .table-section,
+#report-owner .table-section {
+  font-size: 18px;
+}
+
+#report-manager label,
+#report-owner label {
+  padding: 17px 0px;
+  margin: 0px;
+  display: inline-block;
+}
+
+/* Page 15 - 16: Maintain + Maintain history (IT Staff) */
+#maintain {
+  padding: 30px 0px;
+  min-height: 500px;
+  font-size: 18px;
+}
+
+#maintain .btn-maintain-it {
+  margin: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #333;
+  padding: 20px;
+  transition: all 0.2s ease 0s;
+}
+
+#maintain .btn-maintain-it:hover {
+  transition: all 0s;
+  background-color: #00ccff;
+}
+
+#maintain-history {
+  padding: 30px 0px;
+  min-height: 500px;
+  font-size: 18px;
+}
+
+/* Page 17 - 21: User info */
+#user-info {
+  padding: 30px 0px;
+  min-height: 500px;
+  font-size: 18px;
+}
+
+#user-info .info-section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* Page 22: Maintaining */
+#maintaining {
+  padding: 30px 0px;
+  min-height: 500px;
+  font-size: 18px;
+}
+
+#maintaining h2-heading::after {
+  display: none;
+  bottom: 0;
+  left: 0;
+  margin-left: 0;
+}
+
+#maintaining p {
+  text-align: center;
+}
